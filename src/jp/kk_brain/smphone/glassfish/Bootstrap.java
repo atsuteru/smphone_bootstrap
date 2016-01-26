@@ -17,8 +17,8 @@ public class Bootstrap {
 		
 		// HTTPポートの取得。8080 < 環境変数(HTTP_PORT) < Javaシステムプロパティ(portHttp)の優先順位
 		int portHttp = 8080;
-		if(null != System.getenv("HTTP_PORT") && System.getenv("HTTP_PORT").matches("^[0-9]{1,5}$")) {
-			portHttp = Integer.parseInt(System.getenv("HTTP_PORT"));
+		if(null != System.getenv("PORT") && System.getenv("PORT").matches("^[0-9]{1,5}$")) {
+			portHttp = Integer.parseInt(System.getenv("PORT"));
 		}
 		if(null != System.getProperty("portHttp") && System.getProperty("portHttp").matches("^[0-9]{1,5}$")) {
 			portHttp = Integer.parseInt(System.getProperty("portHttp"));
